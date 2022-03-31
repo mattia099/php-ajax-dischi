@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>PHP-AJAX-DISCHI</title>
+</head>
+<body>
+
+  <div id="app">
+    <header>
+      <img src="../assets/logo.png" alt="">
+    </header>
+
+    <main>
+      <div class="card-wrapper">
+       
+        <div v-for="element in discs" class="card">
+          <figure class="poster">
+            <img :src="element.poster" alt="">
+          </figure>
+        
+        <h4 class="title">
+          {{ element.title }}
+        </h4>
+
+        <p class="author">
+          {{ element.author }}
+        </p>
+
+        <p class="year">
+          {{ element.year }}
+        </p>
+        </div>
+        
+
+      </div>
+    </main>
+  </div>
+
+<script src="jscript.js"></script>
+</body>
+</html>

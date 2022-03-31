@@ -56,63 +56,23 @@
     'genre' => 'Metal',
     'year' => '1988'
   ],
-[
+  [
     'poster' => 'https://img.discogs.com/KOBsqQwKiNKH-q927oHMyVdDzSo=/fit-in/596x596/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6406665-1418464475-6120.jpeg.jpg',
     'title' => 'Hard Wired',
     'author' => 'Dave Weckl',
     'genre' => 'Jazz',
     'year' => '1994'
   ],
-[
+  [
     'poster' => 'https://m.media-amazon.com/images/I/71K9CbNZPsL._SS500_.jpg',
     'title' => 'Bad',
     'author' => 'Michael Jacjson',
     'genre' => 'Pop',
     'year' => '1987'
   ]
-];
+  ];
 
+  header('Content-Type: application/json');
+  echo json_encode( $discs );
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <img src="../assets/logo.png" alt="">
-  </header>
-
-  <main>
-    <div class="card-wrapper">
-      <?php 
-        foreach($discs as $disc){
-      ?>
-      <div class="card">
-        <figure class="poster">
-          <img src=<?php echo $disc['poster']?> alt="">
-        </figure>
-    
-      <h4 class="title">
-        <?php echo $disc['title'];?>
-      </h4>
-
-      <p class="author">
-        <?php echo $disc['author'];?>
-      </p>
-
-      <p class="year">
-        <?php echo $disc['year'];?>
-      </p>
-      </div>
-      <? } ?>
-      
-    </div>
-  </main>
-</body>
-</html>
