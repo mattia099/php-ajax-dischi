@@ -1,0 +1,62 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+}
+header{
+  background-color: #2E3A46 ;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+header img{
+  width: 75px;
+  display: block;
+}
+
+main{
+  background-color: #1E2D3B;
+  height: calc(100vh - 75px);
+}
+
+  .card-wrapper{
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+figure{
+  width: 100%;
+}
+.card{
+  text-align: center;
+  width: 18%;
+  background-color: #2E3A46;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.poster{
+  width: 160px;
+}
+
+.title{
+  color: white;
+  text-transform: uppercase;
+}
+
+.author, .year{
+  color: grey;
+}
+
